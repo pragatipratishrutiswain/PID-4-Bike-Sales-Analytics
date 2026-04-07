@@ -21,7 +21,7 @@ easier to track, fulfill, or reference individual items. The order quantity can 
 because each order line item indicates a unique product details. So if the order line item = 8 that means that particular order
 contains 8 different products in a queue. */
 
-/*
+
 -- 1. Regenate OrderQuantity column so that they are >= OrderLineItem in the sales 2015, 2016 and 2017 tables.
 update sales_2015
 set OrderQuantity = 
@@ -147,9 +147,9 @@ SET Shopping_Source = (
         WHEN 4 THEN 'Organic'
     END
 );
-*/
 
-/*
+
+
 select distinct productkey from inventory; # 130 rows
 select productkey from products
 where productkey not in (select distinct productkey from inventory); # 163 rows
@@ -196,4 +196,4 @@ all_assignments AS (
 SELECT stock_date, product_key, stock_quantity
 FROM all_assignments
 ORDER BY product_key, stock_date;
-*/
+
